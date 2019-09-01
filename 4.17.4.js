@@ -1,5 +1,6 @@
 function deepEqual (arg1, arg2) {
   let isValue = false;
+
   if (isObject(arg1, arg2)) {
     isValue = true;
 
@@ -15,7 +16,7 @@ function deepEqual (arg1, arg2) {
             deepEqual(arg1[key], arg2[key])
           }
         } else {
-            return false;
+          return false;
         }
       }
       return true;
